@@ -597,3 +597,4 @@ listaEventos.addEventListener("click", function (evento) {
 });
 
 cargarEventosDesdeLocalStorage();
+// Actualizado a 15/04/26 a las 14:35.
