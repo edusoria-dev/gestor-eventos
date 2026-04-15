@@ -29,7 +29,7 @@ h2 {
   font-weight: 600;
 }
 
-/* ✨ EFECTO CRISTAL */
+/* EFECTO CRISTAL */
 .caja {
   background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(12px);
@@ -306,3 +306,5 @@ select:focus {
   opacity: 0.9;
   transform: translateY(-1px);
 }
+
+/* Actualizado el 15/04/26 a las 16:17 */
