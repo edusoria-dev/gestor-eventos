@@ -1,0 +1,308 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #e9ecf1, #dfe3ea);
+  padding: 30px 20px;
+  color: #1c1c1e;
+}
+
+#app {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+h2 {
+  margin-bottom: 18px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* ✨ EFECTO CRISTAL */
+.caja {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-radius: 22px;
+  padding: 22px;
+  margin-bottom: 20px;
+
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.grupo-campo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+label {
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #3a3a3c;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(200, 200, 200, 0.5);
+  border-radius: 14px;
+  padding: 12px 14px;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #8e8e93;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #007aff;
+  box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.2);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.boton-principal {
+  width: 100%;
+  background: linear-gradient(180deg, #007aff, #005ecb);
+  color: white;
+  border: none;
+  border-radius: 14px;
+  padding: 13px 18px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.boton-principal:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+}
+
+.boton-principal:active {
+  transform: scale(0.98);
+}
+
+#texto-sin-eventos {
+  color: #6e6e73;
+  font-size: 15px;
+}
+
+.tarjeta-evento {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255, 255, 255, 0.5);
+
+  border-radius: 18px;
+  padding: 18px;
+  margin-top: 15px;
+
+  transition: transform 0.2s ease;
+}
+
+.tarjeta-evento:hover {
+  transform: translateY(-2px);
+}
+
+.tarjeta-evento h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.tarjeta-evento p {
+  margin-bottom: 8px;
+  color: #3a3a3c;
+  line-height: 1.5;
+}
+
+.zona-botones {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.boton-editar,
+.boton-secundario,
+.boton-eliminar {
+  border: none;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.boton-secundario {
+  background-color: #f2f2f7;
+  color: #1c1c1e;
+}
+
+.boton-eliminar {
+  background-color: #ff3b30;
+  color: white;
+}
+
+.boton-secundario:hover,
+.boton-eliminar:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.favorito {
+  border: 2px solid #ffd60a;
+  box-shadow: 0 0 0 4px rgba(255, 214, 10, 0.15);
+}
+
+.zona-filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.zona-filtros input,
+.zona-filtros select {
+  flex: 1;
+  min-width: 200px;
+}
+
+#caja-errores {
+  margin-bottom: 15px;
+  color: #d93025;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.campo-error {
+  border: 1px solid #d93025 !important;
+  box-shadow: 0 0 0 3px rgba(217, 48, 37, 0.15);
+}
+
+.zona-contadores {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.zona-contadores p {
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 14px;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #3a3a3c;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 20px 14px;
+  }
+
+  h1 {
+    font-size: 26px;
+    margin-bottom: 22px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .caja {
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .zona-filtros {
+    flex-direction: column;
+  }
+
+  .zona-filtros input,
+  .zona-filtros select {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .zona-contadores {
+    flex-direction: column;
+  }
+
+  .zona-botones {
+    flex-direction: column;
+  }
+
+  .boton-secundario,
+  .boton-eliminar,
+  .boton-principal {
+    width: 100%;
+  }
+
+  .tarjeta-evento {
+    padding: 15px;
+  }
+}
+
+.boton-editar {
+  background-color: #34c759;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.boton-editar:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.boton-editar {
+  background-color: #34c759;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.boton-editar:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
