@@ -3,7 +3,7 @@ const contenedorPrincipal = document.getElementById("app");
 
 // Creo el título principal
 const tituloPrincipal = document.createElement("h1");
-tituloPrincipal.textContent = "Gestor de eventos";
+tituloPrincipal.textContent = "Gestor dinámico de eventos";
 contenedorPrincipal.appendChild(tituloPrincipal);
 
 // Creo la sección del formulario
