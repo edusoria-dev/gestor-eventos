@@ -3,7 +3,7 @@ const contenedorPrincipal = document.getElementById("app");
 
 // Creo el título principal
 const tituloPrincipal = document.createElement("h1");
-tituloPrincipal.textContent = "Gestor dinámico de eventos";
+tituloPrincipal.textContent = "Gestor de eventos";
 contenedorPrincipal.appendChild(tituloPrincipal);
 
 // Creo la sección del formulario
@@ -25,7 +25,7 @@ seccionFormulario.appendChild(cajaErrores);
 const formularioEvento = document.createElement("form");
 formularioEvento.id = "formulario-evento";
 
-// ===== CAMPO TÍTULO =====
+// ===== CAMPO DEL TÍTULO =====
 const grupoTitulo = document.createElement("div");
 grupoTitulo.className = "grupo-campo";
 
@@ -37,7 +37,7 @@ const entradaTitulo = document.createElement("input");
 entradaTitulo.type = "text";
 entradaTitulo.id = "titulo";
 entradaTitulo.name = "titulo";
-entradaTitulo.placeholder = "Ejemplo: Reunión de grupo";
+entradaTitulo.placeholder = "Ejemplo: Presentar última práctica de Lenguaje de Marcas";
 
 grupoTitulo.appendChild(etiquetaTitulo);
 grupoTitulo.appendChild(entradaTitulo);
@@ -47,13 +47,13 @@ const grupoDescripcion = document.createElement("div");
 grupoDescripcion.className = "grupo-campo";
 
 const etiquetaDescripcion = document.createElement("label");
-etiquetaDescripcion.textContent = "Descripción";
+etiquetaDescripcion.textContent = "Descripción del evento";
 etiquetaDescripcion.setAttribute("for", "descripcion");
 
 const entradaDescripcion = document.createElement("textarea");
 entradaDescripcion.id = "descripcion";
 entradaDescripcion.name = "descripcion";
-entradaDescripcion.placeholder = "Escribe una breve descripción del evento";
+entradaDescripcion.placeholder = "Escribe una breve descripción del entregable de Lenguaje de Marcas";
 
 grupoDescripcion.appendChild(etiquetaDescripcion);
 grupoDescripcion.appendChild(entradaDescripcion);
@@ -63,7 +63,7 @@ const grupoFecha = document.createElement("div");
 grupoFecha.className = "grupo-campo";
 
 const etiquetaFecha = document.createElement("label");
-etiquetaFecha.textContent = "Fecha";
+etiquetaFecha.textContent = "Fecha del evento";
 etiquetaFecha.setAttribute("for", "fecha");
 
 const entradaFecha = document.createElement("input");
@@ -346,19 +346,19 @@ function crearTarjetaEvento(titulo, descripcion, fecha, categoria, favorito = fa
 
   const botonEditar = document.createElement("button");
   botonEditar.type = "button";
-  botonEditar.textContent = "✏️ Editar";
+  botonEditar.textContent = "Editar";
   botonEditar.className = "boton-editar";
   botonEditar.setAttribute("data-accion", "editar");
 
   const botonFavorito = document.createElement("button");
   botonFavorito.type = "button";
-  botonFavorito.textContent = "⭐ Favorito";
+  botonFavorito.textContent = "Favorito";
   botonFavorito.className = "boton-secundario";
   botonFavorito.setAttribute("data-accion", "favorito");
 
   const botonEliminar = document.createElement("button");
   botonEliminar.type = "button";
-  botonEliminar.textContent = "🗑 Eliminar";
+  botonEliminar.textContent = "Eliminar";
   botonEliminar.className = "boton-eliminar";
   botonEliminar.setAttribute("data-accion", "eliminar");
 
